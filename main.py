@@ -9,9 +9,9 @@ def print_board(board):
     colcount = 0
     rowcount = 0
     div = "  ---+---+---"
-    print("   A   B   C")   # aggiunge header delle colonne
+    print("   A   B   C")
     for row_id, row in enumerate(board):
-        print(f"{row_id+1}  ", end="")  # aggiunge numero riga e spazio prima del primo carattere
+        print(f"{row_id+1}  ", end="")
         for col in row:
             if colcount < 2:
                 print(f"{col}", end=" | ")
@@ -19,7 +19,7 @@ def print_board(board):
             else:
                 print(col, end=" ")
         colcount = 0
-        print(" ")  # aggiunge spazio dopo l'ultimo carattere
+        print(" ")
         if rowcount < 2:
             print(div)
             rowcount = rowcount + 1
@@ -139,8 +139,10 @@ def main():
                 print("")
                 print(f"Vince il giocatore {player}")
                 break
+        else:
             print("Coordinate non valide")
-
+    else:
+        print("Pareggio")
 
 main()
 
